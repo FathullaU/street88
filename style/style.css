@@ -6,6 +6,7 @@
 }
 a{
     text-decoration: none;
+    overflow: hidden;
 }
 ul{
     list-style: none;
@@ -205,18 +206,41 @@ body{
     margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-between;
+    row-gap: 30px;
 }
 .main-menu__about{
-    max-width: 370px;
-    width: 100%;
-    height: 524px;
+    position: relative;
+    overflow: hidden;
+    width: 23%;
     background: var(--body);
     border-radius: 4px;
 }
-.main-menu__img{
+.main-menu__about img{
     padding: 15px;
     display: block;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s linear;
+}
+.basket{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(105, 207, 23, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.main-menu__about:hover img{
+    transform: translateY(-105%); 
+}
+.main-menu__about:hover .basket{
+    transform: scale(1.3) translateY(-50%);
+    opacity: 1;
+    
 }
 .main-menu__name{
     font-family: var(--rw);
@@ -231,5 +255,82 @@ body{
     font-family: var(--rw);
     font-size: 19px;
     line-height: 25px;
+    color: var(--second-color);
+}
+.branch{
+    background: #fff;
+    padding: 20px 0;
+}
+.title__branch{
+    font-size: 50px;
+    line-height: 40px;
+    color: var(--main-color);
+    text-align: center;
+}
+.footer{
+    background: linear-gradient(180deg, #000000 0%, rgba(105, 207, 23, 0.5) 100%);
+}
+.footer__content{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 81px;
+}
+.number{
+    font-size: 20px;
+    line-height: 23px;
+    font-family: var(--rr);
+    color: var(--second-color);
+}
+.footer__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding-bottom: 81px;
+}
+.footer__link{
+    font-size: 20px;
+    line-height: 23px;
+    font-family: var(--rr);
+    color: var(--second-color);
+}
+.end__of-site{
+    background: #1A3406;
+    padding: 19px 0;
+}
+.training__in-proweb{
+    font-size: 16px;
+    line-height: 19px;
+    font-family: var(--rr);
+    color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutus__content{
+    position: relative;
+}
+.aboutus__title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 65px;
+    text-shadow: 0px 0px 15px rgba(191, 171, 171, 0.4);
+    color: rgba(105, 207, 23, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutus__text{
+    padding: 30px 0;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
     color: var(--second-color);
 }
