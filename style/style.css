@@ -203,59 +203,54 @@ body{
 }
 .main__content{
     padding: 15px;
-    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 30px;
 }
-.main-menu__about{
-    position: relative;
-    overflow: hidden;
-    width: 23%;
-    background: var(--body);
-    border-radius: 4px;
-}
-.main-menu__about img{
+.main__menu{
     padding: 15px;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    transition: 0.5s linear;
+    background: var(--body);
+    width: 23%;
 }
-.basket{
-    position: absolute;
-    left: 0;
-    top: 0;
+.main__img2{
     width: 100%;
-    background: rgba(105, 207, 23, 0.9);
+}
+.main__img2:hover .main__svg{
+    transform: translateY(0%);
+}
+.main__img{
+    position: relative;
+}
+.main__svg{
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(105, 207, 23, 0.9);
+    transform: translateY(-100%);
 }
-.main-menu__about:hover img{
-    transform: translateY(-105%); 
-}
-.main-menu__about:hover .basket{
-    transform: scale(1.3) translateY(-50%);
-    opacity: 1;
-    
-}
+
 .main-menu__name{
-    font-family: var(--rw);
-    font-weight: 700;
+    padding: 15px 0;
     font-size: 19px;
     line-height: 15px;
+    display: block;
     color: var(--second-color);
-    padding-left: 15px;
+    font-weight: 700;
+    font-family: var(--rw);
 }
 .main-menu__text{
-    padding: 15px;
-    font-family: var(--rw);
     font-size: 19px;
     line-height: 25px;
     color: var(--second-color);
+    font-weight: 400;
+    font-family: var(--rw);
 }
 .branch{
     background: #fff;
